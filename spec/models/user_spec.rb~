@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id         :integer          not null, primary key
+#  name       :string
+#  email      :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+require 'rails_helper'
+
+#RSpec.describe User, type: :model do
+ # pending "add some examples to (or delete) #{__FILE__}"
+describe User do
+  before(:each) do
+     @attr = { :name => "Example User", :email => "user@example.com" }
+  end
+
+  it "should create a new instance given valid attributes" do
+     User.create!(@attr)
+  end
+
+  it "should require a name"
+end
