@@ -43,6 +43,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'annotate'
   gem 'capybara'
+  gem 'sqlite3'
 end
 
 group :development do
