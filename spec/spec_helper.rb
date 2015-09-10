@@ -91,4 +91,7 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 	config.include Capybara::DSL
+  def test_sign_in(user)
+    controller.sign_in(user)
+  end
 end
