@@ -73,6 +73,16 @@ RSpec.describe UsersController, type: :controller do
 		expect(response.body).to have_selector('h1>img', :class => "gravatar")
 		#response.should have_selector("h1>img", :class => "gravatar")
 	end
+<<<<<<< HEAD
+=======
+	it "should show the user's microposts" do
+		mp1 = Factory(:micropost, :user => @user, :content => "Foo bar")
+		mp2 = Factory(:micropost, :user => @user, :content => "Baz quux")
+		get :show, :id => @user
+		expect(response.body).to have_selector("span.content", :content => mp1.content)
+		expect(response.body).to have_selector("span.content", :content => mp2.content)
+	end
+>>>>>>> post
   end
 
   describe "GET #new" do

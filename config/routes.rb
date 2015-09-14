@@ -3,10 +3,18 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
+<<<<<<< HEAD
+=======
+  resources :microposts, :only => [:create, :destroy]
+>>>>>>> post
   
   get '/signup', :to => 'users#new'
   get '/signin', :to => 'sessions#new'
   get '/signout', :to => 'sessions#destroy'
+<<<<<<< HEAD
+=======
+  get '/microposts/:id', :to => 'microposts#destroy'
+>>>>>>> post
 
   get 'users/new'
   get '/signup', :to => 'users#new'
